@@ -53,9 +53,9 @@ function oddChecker(num){
 
 // Create a function called 'iLove' that takes in two string parameters, 'name' and 'love'. Have the function take the two parameters and return a string that says "NAMEPARAM loves LOVEPARAM" with the appropriate parameters in the string. e.g. "Joseph loves music"
 
-// function iLove(name, love){
-	
-// }
+function iLove(name, love){
+	return `${name} loves ${love}`;
+};
 
 //////////////////PROBLEM 8////////////////////
 
@@ -75,24 +75,22 @@ colorCopy.push('blue');
 // Create a new array called 'middleNums' from the numbers array that will capture only the middle numbers (2, 3, 4).
 const numbers = [1, 2, 3, 4, 5]
 
-// function middle(){
-// 	let middleNums = [];
-// 	numbers.pop()
-// 	numbers.shift()
-// 	middleNums.push(numbers);
-// 	return middleNums;
-// }
+	let middleNums = numbers.slice(1, -1);
+	
 
 //////////////////PROBLEM 11////////////////////
 
 // Create an object called 'me' that has the following keys: firstName, state, age, and greeter. The value of the firstName key should be your name as a string. The value of the property state should be your current state or providence of residence as a string. The value of age should be your age as a number. greeter should be a method that returns the string 'Hello! My name is NAMEVALUE and I live in STATEVALUE' with the corresponding values. 
 
-// let me = {
-// 	firstName: 'Marco',
-// 	state: 'Arizona',
-// 	age: 30,
-// 	greeter: "Hello! My name is" + firstName + "and I live in" + state +
-// }
+const me = {
+	firstName: 'Marco',
+	state: 'Arizona',
+	age: 30,
+	greeter: function greeter (str) {
+		str = `Hello! My name is ${firstName} and I live in ${state}`;
+		return str;
+	}
+}
 
 //////////////////PROBLEM 12////////////////////
 
@@ -151,7 +149,10 @@ let total = myNumbers.reduce((acc, curr) => acc + curr);
 // Finally, use .forEach to find the index of each item in the array. To begin, create an empty array called 'myNumbersIndex'. Then, use forEach to push each item's index from the myNumbers array into the newly created myNumbersIndex array. 
 
 // let myNumbersIndex = [];
-// myNumbers.forEach(myNumbersIndex.push(myNumbers));
+// function help(){
+// myNumbers.forEach(element => console.log(element));
+// myNumbersIndex.push(myNumbers);
+// }
 
 
 //////////////////PROBLEM 18////////////////////
@@ -173,10 +174,12 @@ const people = [
 	{ name: 'Josh', friend: true, awesomeLevel: 7 }
 ]
 
-// let enemies = people.filter(elem => elem.friend === false);
+let enemies = people.filter(elem => elem.friend === false);
 
 //////////////////PROBLEM 20////////////////////
 
 // Using the people array above, get a total of the awesomeLevel from all the people, and store that value in a variable named 'totallyAwesome'. Use .reduce().
 
-// let totallyawesome = people.reduce((acc, curr.awesomeLevel) acc += curr.awesomeLevel);
+// let totallyAwesome = people.reduce((acc, curr) => curr.awesomeLevel == acc, 0)
+
+
