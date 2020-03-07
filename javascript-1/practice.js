@@ -148,11 +148,12 @@ let total = myNumbers.reduce((acc, curr) => acc + curr);
 
 // Finally, use .forEach to find the index of each item in the array. To begin, create an empty array called 'myNumbersIndex'. Then, use forEach to push each item's index from the myNumbers array into the newly created myNumbersIndex array. 
 
-// let myNumbersIndex = [];
-// function help(){
-// myNumbers.forEach(element => console.log(element));
-// myNumbersIndex.push(myNumbers);
-// }
+let myNumbersIndex = []
+myNumbers.forEach((elem, index) => {
+	console.log(index)
+	myNumbersIndex.push(index);
+})
+
 
 
 //////////////////PROBLEM 18////////////////////
@@ -180,6 +181,14 @@ let enemies = people.filter(elem => elem.friend === false);
 
 // Using the people array above, get a total of the awesomeLevel from all the people, and store that value in a variable named 'totallyAwesome'. Use .reduce().
 
-// let totallyAwesome = people.reduce((acc, curr) => curr.awesomeLevel == acc, 0)
+let totallyAwesome = people.reduce((acc, curr) => {
+	console.log(acc)
+	return curr.awesomeLevel += acc
+
+		
+}, 0)
+
+console.log(totallyAwesome)
+
 
 
